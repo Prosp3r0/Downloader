@@ -7,6 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from wx.lib.pubsub import Publisher
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -51,6 +52,7 @@ class Ui_MainWindow(object):
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+        Publisher().subscribe(self.updateDisplay, "update")
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -64,4 +66,3 @@ class Ui_MainWindow(object):
         self.label_2.setText(_translate("MainWindow", "Task A:"))
         self.label_3.setText(_translate("MainWindow", "Task B:"))
         self.DownloadButton.setText(_translate("MainWindow", "Download"))
-
