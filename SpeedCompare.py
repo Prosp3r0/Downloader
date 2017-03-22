@@ -146,26 +146,6 @@ if __name__ == '__main__':
     task2.start()
     for th in t:
         th.join()
-    #task1.join()
     end = time.time()
     print(str(end - start))
 
-    #t.start()
-
-"""
-http://down.xy1758.com/win7/32/360/YLMF_GHOSTWIN7SP1_X86_YN2017.ISO
-
-
-    http://dldir1.qq.com/qqfile/qq/QQ8.9/20029/QQ8.9.exe
-    http://downmini.kugou.com/kugou8140.exe
-    http://down.xy1758.com/win7/32/360/YLMF_GHOSTWIN7SP1_X86_YN2017.ISO
-    http://s1.music.126.net/download/pc/cloudmusicsetup_2_1_2[178132].exe;http://downmini.kugou.com/kugou8140.exe
-    a = threading.Thread(target=MultiDownloader, args=(adfasdfa))
-    b = threading.Thread(target=MultiDownloader, args=link2)
-    a.run()
-    b.run()
-    #c.append(a)
-    #c.append(b)
-    #for th in c:
-    #    th.run()
-    """
